@@ -1,0 +1,77 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class playerController : MonoBehaviour {
+
+    public float speed;
+    CharacterController characterController;
+
+   
+    public float jumpSpeed = 8.0f;
+    public float maxJumpPower = 10.0f;
+    //private float jumpPower = 0f;
+    
+    public float gravity = 20.0f;
+
+    private Vector3 moveDirection = Vector3.zero;
+    private Vector3 rotDirection = Vector3.zero;
+    private Vector3 rotcurrent = Vector3.zero;
+    private static Vector3 rot2 = Vector3.zero;
+    private float smoothTime = 0.05f; //For rotation smoothing
+    
+    
+    void Start () {
+        characterController = GetComponent<CharacterController> ();
+    }
+
+    void Update () {
+            
+        //
+        
+        //Movement                
+        if (characterController.isGrounded) {
+            // We are grounded, so recalculate
+            // move direction directly from axes
+            moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0.0f, Input.GetAxis ("Vertical"));
+            
+            //jump
+            //add jump timer so cant spam // maybe a jump charge up?
+            if (Input.GetButton ("Jump")) {
+                moveDirection.y = jumpSpeed;
+
+                //Charging jump
+                //while its pressed and less than maxJump, 
+                    //jumpPower =chargespeed * deltatime 
+                //on release, jump with jumpPower
+            }
+        }
+        //rotate to forward direction 
+        if ((moveDirection != Vector3.zero)) {
+
+            //get controller input
+            rotDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0.0f, Input.GetAxis ("Vertical"));
+
+            //smoothly change rotatecurrent to rotDirection
+            rot2 = Vector3.SmoothDamp(rotcurrent, rotDirection, ref rotDirection, smoothTime);
+
+            //update player rotation based on transition
+            transform.forward = rot2;
+
+            //update current rotation
+            rotcurrent= rot2;
+        }
+        
+
+        
+       
+
+        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
+        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
+        // as an acceleration (ms^-2)
+        moveDirection.y -= gravity * Time.deltaTime;
+
+        // Move the controller
+        characterController.Move(moveDirection * Time.deltaTime * speed);
+    }
+}

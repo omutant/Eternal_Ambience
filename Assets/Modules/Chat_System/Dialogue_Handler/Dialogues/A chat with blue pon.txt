@@ -1,0 +1,35 @@
+#M this is a message to the user of this document
+#M any lines which are blank or start with #M will be ignored by the reader
+
+#M available # actions:
+#M #D = Dialog - A targetable tag used to send the user to a given part of the dialog.
+#M #N = NewLine - Waits for user input before displaying the next line
+#M #C = Choices - Following lines will be read as the player's responses to the last line of dialog.
+#M  #R<Number>,<dialog name>- = Route - used after #C. Starts the dialog found at the given tag. Default value 0.
+#M  #RL,<dialog name>- = Route_LastLine - same as above. But start the dialog at the last set of lines.
+#M #E = EndDialogue - Marks the end of the current dialog. If no #C tag was encountered, hides canvas after a button is pressed;
+
+#D bluePon_intro
+Hello blue pon
+I am red pon.
+#N
+Who are you?
+#C
+#R - happy_BluePon_Response - I am red <playerName>. Nice to meet you blue pon :D
+#R - angry_BluePon_Response - Who the hell do you think you are? I'll have you know I have 47 confirmed sniper kills in...
+#R - bluePon_goodbye - Talk to you later
+#E 
+
+#D happy_BluePon_Response
+Nice to meet you too <playerName> :)
+#N
+Now please go away. I've got some very important "blue" business to attend to.
+#E
+
+#D angry_BluePon_Response
+Wow... ok then...
+#E
+
+#D bluePon_goodbye
+Have a good day :)
+#E
