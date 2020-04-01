@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DialogueText
+  - PlayerCollider
+  - Pickup
+  - HealthBar
   layers:
   - Default
   - TransparentFX

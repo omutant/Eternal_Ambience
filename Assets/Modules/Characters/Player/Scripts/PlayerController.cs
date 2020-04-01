@@ -64,6 +64,16 @@ public class PlayerController : MonoBehaviour {
 
     }
 
+    IEnumerator Jump()
+    {
+        float jumpStartTime = Time.deltaTime;
+        while (Input.GetButton("Jump") && jumpStartTime > Time.deltaTime + 2 ) 
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        yield return null;
+    }
+
     void Update () {
         //end game
         if (Input.GetKey ("escape")) {

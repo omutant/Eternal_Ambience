@@ -14,7 +14,8 @@ public class ChatBubble : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        visuals.SetActive(true);
+        if (other.gameObject.tag == "Player")
+            visuals.SetActive(true);
     }
     private void OnTriggerStay(Collider other)
     {
