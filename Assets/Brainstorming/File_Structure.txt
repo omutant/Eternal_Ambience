@@ -1,0 +1,31 @@
+Modules
+ - Main_Menu
+    - Save_Files
+        - Save_Game
+        - Load_Game
+    - Menu_UI
+        - Credits
+        - Quit_Game
+        - Game_Selection
+    - Options
+        - Controls
+        - Video
+        - Audio
+
+ - Game_Modules
+    - Levels
+        - Scenes
+            - Local_Components - Models, scripts, etc unique to a given level.
+                Can be prefab variants of global components.
+        - Global_Components - Models, Scripts, etc used in multiple scenes. stuff like doors and buttons.
+            - Pickups
+    - Game_Manager  
+        - Quest_System
+        - Collectible_Manager
+    - Player
+        - Controller
+    - NPC
+        - Dialogue_System - 
+    - Enemies
+        - Controller
+        - AI

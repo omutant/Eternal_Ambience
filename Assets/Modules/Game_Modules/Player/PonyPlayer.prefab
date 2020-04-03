@@ -154,6 +154,143 @@ Transform:
   m_Father: {fileID: 499143547065642001}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1061118817351512386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8060373581117110589}
+  - component: {fileID: 2770090734931998088}
+  - component: {fileID: 172156081151456318}
+  - component: {fileID: 7952030226616441517}
+  - component: {fileID: 8305319960412057036}
+  - component: {fileID: 3308350462033172743}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8060373581117110589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061118817351512386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3234511442869402182}
+  - {fileID: 5207299541596870852}
+  m_Father: {fileID: 3234511444313705106}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &2770090734931998088
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061118817351512386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.31
+  m_Radius: 0.35
+  m_SlopeLimit: 30
+  m_StepOffset: 0.2
+  m_SkinWidth: 0.01
+  m_MinMoveDistance: 0.01
+  m_Center: {x: 0, y: 0.64, z: 0.1}
+--- !u!114 &172156081151456318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061118817351512386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fbae42786cd7c49b251b708baa77b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_Health: 50
+  p_Magic: 50
+  p_MaxHealth: 50
+  p_MaxMagic: 50
+  spellcost: 0
+  cooldowntimer: 0
+  magicRegenSpeed: 0.1
+  spellButtonOne: f
+  spellButtonTwo: g
+  spellButtonThree: h
+  hasSpellForceBlast: 0
+  hasSpellDisperse: 0
+--- !u!114 &7952030226616441517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061118817351512386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e17163935545a343b9b649b8dc1c1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  angled: 0
+  runspeed: 5
+  sneakspeed: 1
+  normalspeed: 3
+  characterController: {fileID: 0}
+  jumpSpeed: 8
+  maxJumpPower: 10
+  jumptimer: 0
+  gravity: 20
+  isAiming: 0
+  cursorTexture: {fileID: 0}
+--- !u!114 &8305319960412057036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061118817351512386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e314f543c67e544a5cd8d8c9a148e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  cost: 25
+  castingTime: 2
+  isAim: 0
+  spellName: spell name
+  spellPower: 5
+--- !u!114 &3308350462033172743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061118817351512386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93aeda1d0924d0443ac5fa8cb8ef2e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayerHealth: 100
+  playerHealth: 100
+  playerVisuals: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!1 &1097038648788563791
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,11 +737,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3234511444313705106}
-  - component: {fileID: 7609394297021440394}
-  - component: {fileID: 6727245312098859967}
-  - component: {fileID: 6713386268168836447}
-  - component: {fileID: 7540967343621420784}
-  - component: {fileID: 6955156314896012665}
   m_Layer: 0
   m_Name: PonyPlayer
   m_TagString: Player
@@ -619,115 +751,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925309583578364033}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3234511442869402182}
   - {fileID: 7609394295115113115}
   - {fileID: 7609394296767618096}
-  - {fileID: 5207299541596870852}
+  - {fileID: 8060373581117110589}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &7609394297021440394
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925309583578364033}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.31
-  m_Radius: 0.35
-  m_SlopeLimit: 30
-  m_StepOffset: 0.2
-  m_SkinWidth: 0.01
-  m_MinMoveDistance: 0.01
-  m_Center: {x: 0, y: 0.64, z: 0.1}
---- !u!114 &6727245312098859967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925309583578364033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fbae42786cd7c49b251b708baa77b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  p_Health: 50
-  p_Magic: 50
-  p_MaxHealth: 50
-  p_MaxMagic: 50
-  spellcost: 0
-  cooldowntimer: 0
-  magicRegenSpeed: 0.1
-  spellButtonOne: f
-  spellButtonTwo: g
-  spellButtonThree: h
-  hasSpellForceBlast: 0
-  hasSpellDisperse: 0
---- !u!114 &6713386268168836447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925309583578364033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e314f543c67e544a5cd8d8c9a148e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 7540967343621420784}
-  cost: 25
-  castingTime: 2
-  isAim: 0
-  spellName: spell name
-  spellPower: 5
---- !u!114 &7540967343621420784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925309583578364033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e17163935545a343b9b649b8dc1c1dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  angled: 0
-  runspeed: 5
-  sneakspeed: 1
-  normalspeed: 3
-  characterController: {fileID: 7609394297021440394}
-  jumpSpeed: 8
-  maxJumpPower: 10
-  jumptimer: 0
-  gravity: 20
-  isAiming: 0
-  cursorTexture: {fileID: 0}
---- !u!114 &6955156314896012665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925309583578364033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93aeda1d0924d0443ac5fa8cb8ef2e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPlayerHealth: 100
-  playerHealth: 100
 --- !u!1 &1925309584482519125
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +785,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925309584482519125}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -760,7 +793,7 @@ Transform:
   - {fileID: 9002348761835710740}
   - {fileID: 4655233273797097301}
   - {fileID: 2733724652228299606}
-  m_Father: {fileID: 3234511444313705106}
+  m_Father: {fileID: 8060373581117110589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4785436087994423100
@@ -2459,7 +2492,7 @@ Transform:
   - {fileID: 7609394296189017918}
   - {fileID: 7609394296825549189}
   m_Father: {fileID: 3234511444313705106}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7609394295115113114
 MonoBehaviour:
@@ -2478,8 +2511,8 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_LookAt: {fileID: 3234511444313705106}
-  m_Follow: {fileID: 3234511444313705106}
+  m_LookAt: {fileID: 8060373581117110589}
+  m_Follow: {fileID: 8060373581117110589}
   m_CommonLens: 1
   m_Lens:
     FieldOfView: 55
@@ -2775,7 +2808,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7609394296189017916}
-  m_LocalRotation: {x: 0.0029736483, y: 0.0000004169047, z: -0.000000020743062, w: 0.9999956}
+  m_LocalRotation: {x: 0.0029736736, y: 0.0000004169047, z: -0.000000020742998, w: 0.9999956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3105,12 +3138,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7609394296767618100}
-  m_LocalRotation: {x: 0.0029736545, y: -0, z: -0, w: 0.99999565}
+  m_LocalRotation: {x: 0.0029737279, y: -0, z: -0, w: 0.9999956}
   m_LocalPosition: {x: 0, y: 2, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3234511444313705106}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7609394296767618097
 Camera:
@@ -3709,12 +3742,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9012816154136899170}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3234511444313705106}
-  m_RootOrder: 3
+  m_Father: {fileID: 8060373581117110589}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3130135279034404383
 BoxCollider:
