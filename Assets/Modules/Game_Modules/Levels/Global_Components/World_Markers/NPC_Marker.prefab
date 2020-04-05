@@ -1,5 +1,99 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8389707889113560739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2801830497282869835}
+  - component: {fileID: 1322847428819623100}
+  - component: {fileID: 8669096619642939553}
+  - component: {fileID: 1646874158917485001}
+  m_Layer: 0
+  m_Name: Interaction_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2801830497282869835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389707889113560739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10.29, z: 0}
+  m_LocalScale: {x: 40.002, y: -0.045503225, z: 40.002}
+  m_Children: []
+  m_Father: {fileID: 7102999128763566037}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1322847428819623100
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389707889113560739}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8669096619642939553
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389707889113560739}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 033bcbb96ec18774289e532adebc31a7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &1646874158917485001
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389707889113560739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &97129675068671758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17,46 +111,61 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e36fc550fadb0074d920aeb9e029e35d, type: 2}
+    - target: {fileID: 4489577647476996169, guid: 908ecaebf721d0c4aab692be26ffa9ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 4968972205530376295, guid: 908ecaebf721d0c4aab692be26ffa9ed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.39
+      objectReference: {fileID: 0}
     - target: {fileID: 5247248270911596101, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_Name
-      value: NPC_Marker
+      value: Cave_NPC
       objectReference: {fileID: 0}
     - target: {fileID: 6856178215607989938, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: _details
-      value: I am a NPC marker. Used to mark where an NPC should be. Write what my
-        purpose is here.
+      value: Scared_Looking character. Waiting for the player to get in range before
+        starting the Cave_Cutscene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028432202149204420, guid: 908ecaebf721d0c4aab692be26ffa9ed,
+        type: 3}
+      propertyPath: m_Name
+      value: Actor
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 44.01
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -10.51
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: 62.31
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
         type: 3}
@@ -85,3 +194,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 908ecaebf721d0c4aab692be26ffa9ed, type: 3}
+--- !u!4 &7102999128763566037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7191121604523491547, guid: 908ecaebf721d0c4aab692be26ffa9ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 97129675068671758}
+  m_PrefabAsset: {fileID: 0}
